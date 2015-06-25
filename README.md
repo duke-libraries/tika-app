@@ -1,6 +1,6 @@
 # Tika::App
 
-TODO: Write a gem description
+Ruby bindings for Tika command-line API.
 
 ## Installation
 
