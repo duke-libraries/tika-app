@@ -1,4 +1,5 @@
 require_relative "command"
+require_relative "result"
 
 module Tika
   module Commands
