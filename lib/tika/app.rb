@@ -1,23 +1,29 @@
 require_relative "error"
 require_relative "commands"
 require_relative "resource"
+require_relative "rake_tasks"
+require "openssl"
 
 module Tika
   class App
 
+    DEFAULT_TIKA_PATH = File.expand_path("../../../bin/tika-app.jar", __FILE__)
+
     class << self
       attr_accessor :path
+
+      def install_tasks
+        RakeTasks.install
+      end
     end
 
     include Commands
-
-    DEFAULT_PATH = File.expand_path("../../../bin/tika-app.jar", __FILE__)
 
     attr_reader :path
     attr_accessor :result
 
     def initialize(opts={})
-      @path = opts[:path] || self.class.path || ENV["TIKA_APP"] || DEFAULT_PATH      
+      @path = opts[:path] || self.class.path || ENV["TIKA_APP"] || DEFAULT_TIKA_PATH
     end
 
     def get_text(file, opts={})
