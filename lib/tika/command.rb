@@ -1,6 +1,4 @@
 require "open3"
-require "tempfile"
-require_relative "result"
 
 module Tika
   class Command
