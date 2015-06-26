@@ -2,7 +2,6 @@ require_relative "error"
 require_relative "commands"
 require_relative "resource"
 require_relative "rake_tasks"
-require "openssl"
 
 module Tika
   class App
