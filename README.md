@@ -20,6 +20,14 @@ Or install it yourself as:
 
     $ gem install tika-app
 
+## Configuration
+
+Set path to Tika jar file:
+
+```ruby
+Tika::App.path = "/path/to/tika-app.jar"
+```
+
 ## Usage
 
 ```ruby
