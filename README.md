@@ -28,6 +28,8 @@ Set path to Tika jar file:
 Tika::App.path = "/path/to/tika-app.jar"
 ```
 
+Alternatively, you can set the `TIKA_APP` environment variable to the jar file path.
+
 ## Usage
 
 ```ruby
