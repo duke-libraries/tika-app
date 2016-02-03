@@ -1,5 +1,3 @@
-require_relative "app"
-
 module Tika
   class Resource
 
