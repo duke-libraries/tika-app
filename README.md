@@ -28,9 +28,13 @@ Set path to Tika jar file:
 Tika::App.path = "/path/to/tika-app.jar"
 ```
 
+Alternatively, you can set the `TIKA_APP` environment variable to the jar file path.
+
 ## Usage
 
 ```ruby
+> require "tika/app"
+ => true
 > resource = Tika::Resource.new("README.md")
  => #<Tika::Resource:0x007f996a04fbe0 @file="README.md", @app=#<Tika::App:0x007f996a04fb68 @path="/path/to/tika-app.jar">, @opts={}> 
 > resource.metadata
