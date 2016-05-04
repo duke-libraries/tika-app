@@ -1,4 +1,5 @@
 require "tika/app"
+require "rspec/its"
 
 FIXTURE_DIR = File.expand_path("../fixtures", __FILE__)
 

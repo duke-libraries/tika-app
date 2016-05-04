@@ -2,16 +2,15 @@ require "json"
 require "forwardable"
 
 module Tika
-
   class Result
     extend Forwardable
 
-    attr_reader :output, :error, :status
+    attr_reader :output, :status
 
     def_delegator :status, :success?
 
-    def initialize(output, error, status)
-      @output, @error, @status = output, error, status
+    def initialize(output, status)
+      @output, @status = output, status
     end
 
     def render

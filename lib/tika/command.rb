@@ -1,5 +1,3 @@
-require "open3"
-
 module Tika
   class Command
 
@@ -31,12 +29,12 @@ module Tika
       if file
         cmd << file
       end
-      cmd
+      cmd.join(" ")
     end
 
     def execute
-      raw_result = Open3.capture3(*command_line)
-      result_class.new(*raw_result)
+      output = `#{command_line}`
+      result_class.new(output, $?)
     end
 
   end

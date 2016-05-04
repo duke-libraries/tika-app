@@ -33,17 +33,22 @@ Alternatively, you can set the `TIKA_APP` environment variable to the jar file p
 ## Usage
 
 ```ruby
-> require "tika/app"
+>> require "tika/app"
  => true
-> resource = Tika::Resource.new("README.md")
+
+>> resource = Tika::Resource.new("README.md")
  => #<Tika::Resource:0x007f996a04fbe0 @file="README.md", @app=#<Tika::App:0x007f996a04fb68 @path="/path/to/tika-app.jar">, @opts={}> 
-> resource.metadata
+
+>> resource.metadata
  => {"Content-Encoding"=>"ISO-8859-1", "Content-Length"=>"580", "Content-Type"=>"text/plain; charset=ISO-8859-1", "X-Parsed-By"=>["org.apache.tika.parser.DefaultParser", "org.apache.tika.parser.txt.TXTParser"], "resourceName"=>"README.md"} 
-> resource.language
+
+>> resource.language
  => "en" 
-> resource.content_type
+
+>> resource.content_type
  => "text/x-web-markdown" 
-> resource.text
+
+>> resource.text
  => "# Tika::App\n\nRuby bindings for Tika command-line API.\n\n## Installation\n\nAdd this line to your application's Gemfile:\n\n```ruby\ngem 'tika-app'\n```\n\nAnd then execute:\n\n    $ bundle\n\nOr install it yourself as:\n\n    $ gem install tika-app\n\n## Usage\n\nTODO: Write usage instructions here\n\n## Contributing\n\n1. Fork it ( https://github.com/[my-github-username]/tika-app/fork )\n2. Create your feature branch (`git checkout -b my-new-feature`)\n3. Commit your changes (`git commit -am 'Add some feature'`)\n4. Push to the branch (`git push origin my-new-feature`)\n5. Create a new Pull Request" 
 ```
 
