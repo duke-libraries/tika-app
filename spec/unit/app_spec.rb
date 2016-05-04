@@ -10,6 +10,7 @@ module Tika
         end
       end
       describe "with an image" do
+        pending "Decision on including Tesseract dependency"
         let(:file) { File.join(FIXTURE_DIR, "Lorem_ipsum.tiff") }
         it "returns the text of the file" do
           text = subject.get_text(file)

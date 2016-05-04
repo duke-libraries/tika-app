@@ -9,6 +9,7 @@ module Tika
         its(:text) { is_expected.to match(/^Lorem ipsum/) }
       end
       describe "with an image" do
+        pending "Decision on including Tesseract dependency"
         let(:file) { File.join(FIXTURE_DIR, "Lorem_ipsum.tiff") }
         its(:text) { is_expected.to match(/^Lorem ipsum/) }
       end
