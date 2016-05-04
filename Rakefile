@@ -10,6 +10,6 @@ RSpec::Core::RakeTask.new(:spec)
 task default: :spec
 
 task :ci => ['tika:download'] do
-  Tika::App.path = File.join(File.expand_path('../contrib', __FILE__), 'tika-app.jar')
+  ENV["TIKA_APP"] = File.join(File.expand_path('../contrib', __FILE__), 'tika-app.jar')
   Rake::Task[:spec].invoke
 end
