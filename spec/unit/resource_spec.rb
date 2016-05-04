@@ -4,15 +4,8 @@ module Tika
     subject { described_class.new(file) }
 
     describe "#text" do
-      describe "with a document" do
-        let(:file) { File.join(FIXTURE_DIR, "Lorem_ipsum.docx") }
-        its(:text) { is_expected.to match(/^Lorem ipsum/) }
-      end
-      describe "with an image" do
-        pending "Decision on including Tesseract dependency"
-        let(:file) { File.join(FIXTURE_DIR, "Lorem_ipsum.tiff") }
-        its(:text) { is_expected.to match(/^Lorem ipsum/) }
-      end
+      let(:file) { File.join(FIXTURE_DIR, "Lorem_ipsum.docx") }
+      its(:text) { is_expected.to match(/^Lorem ipsum/) }
     end
 
     describe "#metadata" do

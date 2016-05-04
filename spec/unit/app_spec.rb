@@ -2,20 +2,10 @@ module Tika
   RSpec.describe App do
 
     describe "#get_text" do
-      describe "with a document" do
-        let(:file) { File.join(FIXTURE_DIR, "Lorem_ipsum.docx") }
-        it "returns the text of the file" do
-          text = subject.get_text(file)
-          expect(text).to match(/Lorem ipsum/)
-        end
-      end
-      describe "with an image" do
-        pending "Decision on including Tesseract dependency"
-        let(:file) { File.join(FIXTURE_DIR, "Lorem_ipsum.tiff") }
-        it "returns the text of the file" do
-          text = subject.get_text(file)
-          expect(text).to match(/^Lorem ipsum/)
-        end
+      let(:file) { File.join(FIXTURE_DIR, "Lorem_ipsum.docx") }
+      it "returns the text of the file" do
+        text = subject.get_text(file)
+        expect(text).to match(/Lorem ipsum/)
       end
     end
 
