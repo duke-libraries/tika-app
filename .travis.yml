@@ -3,7 +3,6 @@ language: ruby
 rvm:
   - 2.1
   - 2.2
-  - 2.3
 script: "bundle exec rake ci"  
 jdk:
   - oraclejdk8
